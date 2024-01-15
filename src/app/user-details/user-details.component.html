@@ -1,0 +1,23 @@
+
+<form  [formGroup]="userDetailesForm" class="detailes-form">
+
+    <h3>User Detailes</h3>
+        <mat-form-field class="mat-form">
+            <mat-label> Name </mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form">
+            <mat-label> Email </mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form">
+            <mat-label> Phone </mat-label>
+            <input matInput formControlName="phone">
+        </mat-form-field>
+        <button mat-raised-button color="primary" mat-dialog-close (click)="save()">save</button>
+  </form>
+
+
+    

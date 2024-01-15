@@ -25,6 +25,7 @@ run it locally and use the user.service.ts in the open-api folder to connect to 
 2. The list of users should be displayed in a table with the following columns:
     * Id
     * Name
+
     * Email
     * Phone
 3. Add a button to the list of users that will allow the user to do the following:
