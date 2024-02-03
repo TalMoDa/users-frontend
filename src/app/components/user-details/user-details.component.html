@@ -1,4 +1,4 @@
-<form *ngIf="user; else elseBlock" class="user-details-container">
+<form *ngIf="user; else elseBlock" class="user-details-container" (ngSubmit)="toggleSubmit()">
 	<h1>Here you can find details about: <span>{{user.name}}</span></h1>
 	<div class="info-container">
 		<div class="row-container">
@@ -18,7 +18,7 @@
 		<button type="submit" (click)="toggleAction('edit')">Edit</button>
 		<button type="submit" (click)="toggleAction('delete')">Delete</button>
 	</div>
-
+	<p *ngIf="error">{{error}}</p>
 </form>
 
 <ng-template #elseBlock>

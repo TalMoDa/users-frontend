@@ -1,4 +1,4 @@
-<form>
+<form (ngSubmit)="createUser()">
 	<h1>Create a new User:</h1>
 	<div class="inputs-container">
 		<div class="input-container">
@@ -12,4 +12,5 @@
 		</div>
 	</div>
 	<button type="submit">Save</button>
+	<p *ngIf="error">{{error}}</p>
 </form>
