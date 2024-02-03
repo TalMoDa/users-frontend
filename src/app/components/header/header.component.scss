@@ -6,6 +6,8 @@ header {
   padding: 1rem 2rem;
 
   h1 {
+    font-size: clamp(1.25rem, 5vw, 2rem);
+    white-space: nowrap;
     text-transform: uppercase;
   }
 
@@ -18,7 +20,8 @@ header {
       li {
         a {
           cursor: pointer;
-          font-size: 1.3rem;
+          white-space: nowrap;
+          font-size: clamp(0.85rem, 4vw, 1.25rem);
           color: black;
           text-decoration: none;
           text-transform: uppercase;

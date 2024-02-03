@@ -1,1 +1,15 @@
-<p>new-user works!</p>
+<form>
+	<h1>Create a new User:</h1>
+	<div class="inputs-container">
+		<div class="input-container">
+			<input type="text" placeholder="Name" class="input-style" (input)="onFieldChange($event, 'name')" />
+		</div>
+		<div class="input-container">
+			<input type="text" placeholder="Phone" class="input-style" (input)="onFieldChange($event, 'phone')" />
+		</div>
+		<div class="input-container">
+			<input type="text" placeholder="Email" class="input-style" (input)="onFieldChange($event, 'email')" />
+		</div>
+	</div>
+	<button type="submit">Save</button>
+</form>
