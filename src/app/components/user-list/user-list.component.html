@@ -1,1 +1,24 @@
-<p>user-list works!</p>
+<table *ngIf="users.length > 0; else elseBlock">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users">
+			<td>{{user.id}}</td>
+			<td>{{user.name}}</td>
+			<td>{{user.email}}</td>
+			<td>{{user.phone}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<ng-template #elseBlock>
+	<p>
+		No Users Found...
+	</p>
+</ng-template>

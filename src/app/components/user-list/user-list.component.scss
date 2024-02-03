@@ -1,0 +1,43 @@
+$header-background: #8c8e8f;
+$header-color: white;
+$border-color: #bdc3c7;
+$shadow-box: 2px 2px 12px rgba(0, 0, 0, 0.3);
+
+table {
+  border-collapse: collapse;
+  border: 1px solid $border-color;
+  box-shadow: $shadow-box;
+  tbody {
+    tr {
+      cursor: pointer;
+      transition: 325ms all;
+
+      td {
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: #e4e4e4;
+        transform: scale(1.05);
+        box-shadow: $shadow-box;
+      }
+    }
+  }
+
+  thead {
+    background-color: $header-background;
+    th {
+      color: $header-color;
+    }
+  }
+
+  th,
+  td {
+    padding: 1rem 4vw;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+p {
+  font-size: 2rem;
+}
