@@ -69,6 +69,11 @@ export class UserDetailsComponent {
     this.actionType = actionType;
   }
 
+  /**
+   *
+   * @returns true or false if the form is valid
+   */
+
   validationForm() {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const israelPhone =

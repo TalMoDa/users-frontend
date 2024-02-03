@@ -22,15 +22,18 @@ export class NewUserComponent {
   }
 
   createUser() {
-    console.log('check');
     if (this.validationForm()) {
-      console.log('check2');
       this.userService
         .createUser(this.user)
         .subscribe((users: User[]) => this.usersUpdated.emit(users));
       this.router.navigate(['/users']);
     }
   }
+
+  /**
+   *
+   * @returns true or false if the form is valid
+   */
 
   validationForm() {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
