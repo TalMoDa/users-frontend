@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user-model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -9,5 +11,15 @@ import { User } from 'src/app/models/user-model';
 export class UserListComponent {
   users: User[] = [];
 
-  constructor() {}
+  constructor(private router: Router, private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.userService
+      .getUsers()
+      .subscribe((result: User[]) => (this.users = result));
+  }
+
+  toggleNavigate(id: number | undefined) {
+    this.router.navigate([`/userDetails/${id}`]);
+  }
 }
