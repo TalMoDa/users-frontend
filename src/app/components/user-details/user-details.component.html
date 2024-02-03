@@ -1,1 +1,28 @@
-<p>user-details works!</p>
+<form *ngIf="user; else elseBlock" class="user-details-container">
+	<h1>Here you can find details about: <span>{{user.name}}</span></h1>
+	<div class="info-container">
+		<div class="row-container">
+			<span>Name: </span>
+			<input type="text" (input)="onFieldChange($event, 'name')" [value]="user.name" [disabled]="!editable" />
+		</div>
+		<div class="row-container">
+			<span>Phone: </span>
+			<input type="text" (input)="onFieldChange($event, 'phone')" [value]="user.phone" [disabled]="!editable" />
+		</div>
+		<div class="row-container">
+			<span>Email: </span>
+			<input type="text" (input)="onFieldChange($event, 'email')" [value]="user.email" [disabled]="!editable" />
+		</div>
+	</div>
+	<div class="buttons-container">
+		<button type="submit" (click)="toggleAction('edit')">Edit</button>
+		<button type="submit" (click)="toggleAction('delete')">Delete</button>
+	</div>
+
+</form>
+
+<ng-template #elseBlock>
+	<p>
+		No Users Found...
+	</p>
+</ng-template>
